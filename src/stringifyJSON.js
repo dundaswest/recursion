@@ -5,15 +5,10 @@
 
 var stringifyJSON = function(obj) {
   let output = '';
-  if(typeof obj === 'number') {
+  if(typeof obj === 'number' || typeof obj === 'boolean' || obj === null) {
   	return `${obj}`;
   } 
-  if(obj === null) {
-  	return `null`;
-  }
-  if(typeof obj === 'boolean') {
-  	return `${obj}`;
-  }
+
   if(typeof obj === 'string') {
   	return `"${obj}"`;
   }
